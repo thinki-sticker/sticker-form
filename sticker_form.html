@@ -591,6 +591,15 @@ document.querySelectorAll('input[type=text],input[type=tel],input[type=email],te
   .forEach(el=>el.addEventListener('input',updateProg));
 
 // ── 送信 ──
+function fileToBase64(file){
+  return new Promise((resolve,reject)=>{
+    const r=new FileReader();
+    r.onload=e=>resolve({name:file.name,type:file.type,data:e.target.result.split(',')[1]});
+    r.onerror=reject;
+    r.readAsDataURL(file);
+  });
+}
+
 async function doSubmit(){
   const name    = document.getElementById('name').value.trim();
   const phone   = document.getElementById('phone').value.trim();
@@ -607,22 +616,17 @@ async function doSubmit(){
   showMsg('wait','送信中… しばらくお待ちください。');
   document.getElementById('submitBtn').disabled=true;
   try{
-    const fd=new FormData();
-    fd.append('name',name); fd.append('phone',phone);
-    fd.append('email',email); fd.append('address',address);
-    fd.append('bike',BIKES[selBike].name); fd.append('color',selColor);
-    fd.append('cut',selCut); fd.append('style',selStyle);
-    fd.append('message',message); fd.append('notes',notes);
-    fd.append('spec_size','直径5cm');
-    fd.append('spec_qty','100枚');
-    fd.append('spec_material','塩ビ裏グレー糊 グロスつや有');
-    fd.append('spec_delivery','台紙カット');
-    fd.append('price','¥15,000（税込）');
-    fd.append('price_agreed','true');
-    uploads.filter(Boolean).forEach((f,i)=>fd.append('file'+i,f,f.name));
-    // ★ Google Apps Script WebアプリURLに置き換えてください ★
+    const activeFiles = uploads.filter(Boolean);
+    const filesData = await Promise.all(activeFiles.map(f=>fileToBase64(f)));
+    const payload = {
+      name, phone, email, address,
+      bike: BIKES[selBike].name, color: selColor,
+      cut: selCut, style: selStyle,
+      message, notes, price_agreed: 'true',
+      files: filesData
+    };
     const GAS_URL='https://script.google.com/macros/s/AKfycbxw9A57e6JIDPPOe5PfofsjF7Jchvk09eTpPw2YGMAF5vBdhtm054BJh7JuoZpdwFevRg/exec';
-    const res=await fetch(GAS_URL,{method:'POST',body:fd});
+    const res=await fetch(GAS_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
     const result=await res.json();
     if(result.status==='ok'){
       showMsg('ok','✅ 送信完了しました！確認メールをご確認ください。');

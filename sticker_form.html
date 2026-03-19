@@ -438,8 +438,8 @@
       </div>
 
       <!-- 同意チェックボックス -->
-      <label class="price-agree" id="priceAgreeLabel" onclick="toggleAgree()">
-        <input type="checkbox" id="priceAgree">
+      <label class="price-agree" id="priceAgreeLabel">
+        <input type="checkbox" id="priceAgree" onchange="toggleAgree()">
         <div class="custom-cb"><span class="cb-check">✓</span></div>
         <div class="cb-text">
           上記仕様および <strong>お支払い金額 ¥15,000（税込）</strong> に同意します。<br>
@@ -543,11 +543,9 @@ function pickStyle(el){
 
 // ── 金額同意 ──
 function toggleAgree(){
-  priceAgreed = !priceAgreed;
-  const lbl = document.getElementById('priceAgreeLabel');
-  const cb  = document.getElementById('priceAgree');
-  lbl.classList.toggle('agreed', priceAgreed);
-  cb.checked = priceAgreed;
+  const cb = document.getElementById('priceAgree');
+  priceAgreed = cb.checked;
+  document.getElementById('priceAgreeLabel').classList.toggle('agreed', priceAgreed);
   updateProg();
 }
 

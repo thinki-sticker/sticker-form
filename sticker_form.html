@@ -226,94 +226,114 @@
 </div>
 
 <!-- FLOW SECTION -->
-<div style="background:#f8fafa;border-bottom:1px solid var(--border);padding:48px 24px;">
+<div style="background:#fff;border-bottom:2px solid var(--border);padding:64px 24px;">
   <div style="max-width:760px;margin:0 auto;">
-    <div style="text-align:center;margin-bottom:36px;">
-      <div style="font-family:'Montserrat',sans-serif;font-size:13px;font-weight:600;letter-spacing:3px;color:var(--teal);text-transform:uppercase;margin-bottom:10px;">How it works</div>
-      <div style="font-family:'Noto Serif JP',serif;font-size:clamp(20px,3vw,28px);font-weight:700;color:var(--text);">申込から受け取りまでの流れ</div>
+
+    <div style="text-align:center;margin-bottom:48px;">
+      <div style="display:inline-block;background:var(--teal-light);color:var(--teal-dark);font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:3px;padding:6px 16px;border-radius:20px;margin-bottom:14px;text-transform:uppercase;">How it works</div>
+      <div style="font-family:'Noto Serif JP',serif;font-size:clamp(22px,3vw,30px);font-weight:700;color:var(--text);">お申込みから受け取りまでの流れ</div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:0;">
+
+    <div style="position:relative;">
+
+      <!-- 縦ライン -->
+      <div style="position:absolute;left:28px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--teal),var(--teal-light));z-index:0;"></div>
 
       <!-- Step 1 -->
-      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px dashed var(--border);">
-        <div style="flex-shrink:0;width:48px;height:48px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:white;">1</span>
+      <div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:32px;position:relative;z-index:1;">
+        <div style="flex-shrink:0;width:56px;height:56px;border-radius:50%;background:var(--teal);border:4px solid white;box-shadow:0 0 0 2px var(--teal);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <span style="font-size:18px;line-height:1;">📝</span>
         </div>
-        <div style="flex:1;padding-top:8px;">
-          <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:4px;">お申込み</div>
-          <div style="font-size:14px;color:var(--text-sub);line-height:1.7;">このフォームに必要事項を入力して送信してください。</div>
+        <div style="background:var(--teal-pale);border:1.5px solid var(--border);border-radius:12px;padding:18px 20px;flex:1;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+            <span style="background:var(--teal);color:white;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;">STEP 1</span>
+            <span style="font-size:17px;font-weight:700;color:var(--text);">お申込み</span>
+          </div>
+          <div style="font-size:14px;color:var(--text-sub);line-height:1.8;">専用フォームに必要事項を入力し、送信してください。</div>
         </div>
-        <div style="font-size:28px;padding-top:8px;">📝</div>
       </div>
 
       <!-- Step 2 -->
-      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px dashed var(--border);">
-        <div style="flex-shrink:0;width:48px;height:48px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:white;">2</span>
+      <div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:32px;position:relative;z-index:1;">
+        <div style="flex-shrink:0;width:56px;height:56px;border-radius:50%;background:var(--teal);border:4px solid white;box-shadow:0 0 0 2px var(--teal);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <span style="font-size:18px;line-height:1;">📧</span>
         </div>
-        <div style="flex:1;padding-top:8px;">
-          <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:4px;">確認メール＋画像送付</div>
-          <div style="font-size:14px;color:var(--text-sub);line-height:1.7;">受付確認メールが届きます。そのメールへ返信する形で、合成したい画像や参考イラストをお送りください。</div>
+        <div style="background:var(--teal-pale);border:1.5px solid var(--border);border-radius:12px;padding:18px 20px;flex:1;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+            <span style="background:var(--teal);color:white;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;">STEP 2</span>
+            <span style="font-size:17px;font-weight:700;color:var(--text);">確認メールの受信・画像送付</span>
+          </div>
+          <div style="font-size:14px;color:var(--text-sub);line-height:1.8;">お申込み後、受付確認メールが届きます。<br>そのメールに返信する形で、合成したい画像や参考イラストをお送りください。</div>
         </div>
-        <div style="font-size:28px;padding-top:8px;">📧</div>
       </div>
 
       <!-- Step 3 -->
-      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px dashed var(--border);">
-        <div style="flex-shrink:0;width:48px;height:48px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:white;">3</span>
+      <div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:32px;position:relative;z-index:1;">
+        <div style="flex-shrink:0;width:56px;height:56px;border-radius:50%;background:var(--teal);border:4px solid white;box-shadow:0 0 0 2px var(--teal);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <span style="font-size:18px;line-height:1;">🏦</span>
         </div>
-        <div style="flex:1;padding-top:8px;">
-          <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:4px;">お振込み</div>
-          <div style="font-size:14px;color:var(--text-sub);line-height:1.7;">確認メールに記載の口座へ<strong>¥15,000（税込）</strong>をお振込みください。入金確認後、制作を開始します。</div>
+        <div style="background:var(--teal-pale);border:1.5px solid var(--border);border-radius:12px;padding:18px 20px;flex:1;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+            <span style="background:var(--teal);color:white;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;">STEP 3</span>
+            <span style="font-size:17px;font-weight:700;color:var(--text);">お振込み</span>
+          </div>
+          <div style="font-size:14px;color:var(--text-sub);line-height:1.8;">確認メールに記載された振込先へ、<strong style="color:var(--teal-dark);">15,000円（税込）</strong>をお振込みください。<br>入金確認後、ステッカーのデザイン作成を開始します。</div>
         </div>
-        <div style="font-size:28px;padding-top:8px;">🏦</div>
       </div>
 
       <!-- Step 4 -->
-      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px dashed var(--border);">
-        <div style="flex-shrink:0;width:48px;height:48px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:white;">4</span>
+      <div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:32px;position:relative;z-index:1;">
+        <div style="flex-shrink:0;width:56px;height:56px;border-radius:50%;background:var(--teal);border:4px solid white;box-shadow:0 0 0 2px var(--teal);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <span style="font-size:18px;line-height:1;">🎨</span>
         </div>
-        <div style="flex:1;padding-top:8px;">
-          <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:4px;">デザイン初校のご確認</div>
-          <div style="font-size:14px;color:var(--text-sub);line-height:1.7;">生成AIで制作したデザイン初校をメールでお送りします。ご確認のうえ、修正のご希望をお知らせください。<br><span style="color:var(--teal-dark);font-weight:600;">※修正は2回まで無料で対応します。</span></div>
+        <div style="background:var(--teal-pale);border:1.5px solid var(--border);border-radius:12px;padding:18px 20px;flex:1;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+            <span style="background:var(--teal);color:white;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;">STEP 4</span>
+            <span style="font-size:17px;font-weight:700;color:var(--text);">デザインの確認</span>
+          </div>
+          <div style="font-size:14px;color:var(--text-sub);line-height:1.8;">作成したステッカーのデザイン案をメールでお送りします。内容をご確認いただき、修正したい点があればお知らせください。<br><span style="display:inline-block;margin-top:6px;background:rgba(120,180,180,0.15);color:var(--teal-dark);font-weight:600;font-size:13px;padding:4px 10px;border-radius:6px;border:1px solid var(--teal);">✏️ 修正は2回まで無料で対応します</span></div>
         </div>
-        <div style="font-size:28px;padding-top:8px;">🎨</div>
       </div>
 
       <!-- Step 5 -->
-      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px dashed var(--border);">
-        <div style="flex-shrink:0;width:48px;height:48px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:white;">5</span>
+      <div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:32px;position:relative;z-index:1;">
+        <div style="flex-shrink:0;width:56px;height:56px;border-radius:50%;background:var(--teal);border:4px solid white;box-shadow:0 0 0 2px var(--teal);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <span style="font-size:18px;line-height:1;">✅</span>
         </div>
-        <div style="flex:1;padding-top:8px;">
-          <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:4px;">校了・製造</div>
-          <div style="font-size:14px;color:var(--text-sub);line-height:1.7;">デザインにOKをいただいたら（校了）、ステッカーの製造に入ります。</div>
+        <div style="background:var(--teal-pale);border:1.5px solid var(--border);border-radius:12px;padding:18px 20px;flex:1;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+            <span style="background:var(--teal);color:white;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;">STEP 5</span>
+            <span style="font-size:17px;font-weight:700;color:var(--text);">デザイン確定・制作開始</span>
+          </div>
+          <div style="font-size:14px;color:var(--text-sub);line-height:1.8;">デザイン内容に問題がなければ、ステッカーの制作を開始します。</div>
         </div>
-        <div style="font-size:28px;padding-top:8px;">🏭</div>
       </div>
 
       <!-- Step 6 -->
-      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;border-bottom:1px dashed var(--border);">
-        <div style="flex-shrink:0;width:48px;height:48px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;">
-          <span style="font-family:'Montserrat',sans-serif;font-size:16px;font-weight:700;color:white;">6</span>
+      <div style="display:flex;gap:24px;align-items:flex-start;margin-bottom:32px;position:relative;z-index:1;">
+        <div style="flex-shrink:0;width:56px;height:56px;border-radius:50%;background:var(--teal);border:4px solid white;box-shadow:0 0 0 2px var(--teal);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <span style="font-size:18px;line-height:1;">📦</span>
         </div>
-        <div style="flex:1;padding-top:8px;">
-          <div style="font-size:17px;font-weight:700;color:var(--text);margin-bottom:4px;">郵送</div>
-          <div style="font-size:14px;color:var(--text-sub);line-height:1.7;">完成したステッカーをご指定の住所へ郵送します。送料は料金に含まれています。</div>
+        <div style="background:var(--teal-pale);border:1.5px solid var(--border);border-radius:12px;padding:18px 20px;flex:1;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+            <span style="background:var(--teal);color:white;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;">STEP 6</span>
+            <span style="font-size:17px;font-weight:700;color:var(--text);">郵送</span>
+          </div>
+          <div style="font-size:14px;color:var(--text-sub);line-height:1.8;">完成したステッカーをご指定の住所へ郵送します。<br>送料は料金に含まれています。</div>
         </div>
-        <div style="font-size:28px;padding-top:8px;">📦</div>
       </div>
 
       <!-- Step 7 -->
-      <div style="display:flex;gap:20px;align-items:flex-start;padding:20px 0;">
-        <div style="flex-shrink:0;width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--teal-dark));display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(120,180,180,0.4);">
-          <span style="font-size:22px;">🏍️</span>
+      <div style="display:flex;gap:24px;align-items:flex-start;position:relative;z-index:1;">
+        <div style="flex-shrink:0;width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--teal-dark));border:4px solid white;box-shadow:0 0 0 3px var(--teal),0 4px 16px rgba(120,180,180,0.4);display:flex;flex-direction:column;align-items:center;justify-content:center;">
+          <span style="font-size:22px;line-height:1;">🏍️</span>
         </div>
-        <div style="flex:1;padding-top:8px;">
-          <div style="font-size:17px;font-weight:700;color:var(--teal-dark);margin-bottom:4px;">受け取り（納品）</div>
-          <div style="font-size:14px;color:var(--text-sub);line-height:1.7;">お届け完了です！ステッカーをお楽しみください。</div>
+        <div style="background:linear-gradient(135deg,var(--teal-light),#e0f0f0);border:2px solid var(--teal);border-radius:12px;padding:18px 20px;flex:1;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+            <span style="background:var(--teal-dark);color:white;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;">GOAL</span>
+            <span style="font-size:17px;font-weight:700;color:var(--teal-dark);">受け取り（納品）</span>
+          </div>
+          <div style="font-size:14px;color:var(--text-sub);line-height:1.8;">お届け完了です。<br>完成したステッカーをお楽しみください！</div>
         </div>
       </div>
 

@@ -198,6 +198,21 @@
     .card{padding:16px;}
     .price-amount{font-size:34px;}
   }
+
+  /* FLOW SECTION */
+  .flow-section{background:#f2f9f9;padding:24px 16px 20px;border-bottom:2px solid #dde8e8;}
+  .flow-section .sec-eyebrow{font-family:'Montserrat',sans-serif;font-size:10px;font-weight:600;letter-spacing:3px;color:#5a9898;text-transform:uppercase;margin-bottom:6px;text-align:center;}
+  .flow-section .sec-title{font-family:'Noto Serif JP',serif;font-size:18px;font-weight:700;color:#2e2e2e;text-align:center;margin-bottom:16px;}
+  .flow-wrap{position:relative;}
+  .flow-step{display:block;margin-bottom:8px;}
+  .flow-card{background:white;border:1.5px solid #dde8e8;border-radius:10px;padding:10px 14px;display:block;width:100%;}
+  .flow-card.goal-card{background:linear-gradient(135deg,#e8f4f4,#e0f0f0);border-color:#78b4b4;}
+  .flow-step-badge{display:inline-block;background:#78b4b4;color:white;font-family:'Montserrat',sans-serif;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-bottom:3px;}
+  .flow-step-badge.goal-badge{background:#5a9898;}
+  .flow-step-title{font-size:14px;font-weight:700;color:#2e2e2e;margin-bottom:2px;}
+  .flow-step-title.goal-title{color:#5a9898;}
+  .flow-step-desc{font-size:12px;color:#3a3a3a;line-height:1.6;}
+  .flow-tag{display:inline-block;margin-top:4px;background:rgba(120,180,180,0.15);color:#5a9898;font-weight:600;font-size:11px;padding:2px 8px;border-radius:6px;border:1px solid #78b4b4;}
 </style>
 </head>
 <body>
@@ -210,7 +225,23 @@
   <div class="header-tag">Custom Sticker Order Form</div>
 </header>
 
-
+<!-- FLOW -->
+<div class="flow-section">
+  <div style="max-width:760px;margin:0 auto;">
+    <div class="sec-eyebrow">How it works</div>
+    <div class="sec-title">お申込みから受け取りまでの流れ</div>
+    <div class="flow-wrap">
+      <div class="flow-step"><div class="flow-card"><div class="flow-step-badge">STEP 1</div><div class="flow-step-title">お申込み</div><div class="flow-step-desc">専用フォームに必要事項を入力し、送信してください。</div></div></div>
+      <div class="flow-step"><div class="flow-card"><div class="flow-step-badge">STEP 2</div><div class="flow-step-title">受付確認メールの受信</div><div class="flow-step-desc">お申込み後、受付確認メールが届きます。メールに記載された振込先へお振込みください。</div></div></div>
+      <div class="flow-step"><div class="flow-card"><div class="flow-step-badge">STEP 3</div><div class="flow-step-title">お振込み</div><div class="flow-step-desc">確認メールに記載された振込先へ、<strong>15,000円（税込）</strong>をお振込みください。入金確認後、担当者よりご連絡します。</div></div></div>
+      <div class="flow-step"><div class="flow-card"><div class="flow-step-badge">STEP 4</div><div class="flow-step-title">画像の送付</div><div class="flow-step-desc">担当者からのメールに返信する形で、合成したい画像や参考イラストをお送りください。</div></div></div>
+      <div class="flow-step"><div class="flow-card"><div class="flow-step-badge">STEP 5</div><div class="flow-step-title">デザインの確認</div><div class="flow-step-desc">作成したデザイン案をメールでお送りします。修正したい点があればお知らせください。<br><span class="flow-tag">✏️ 修正は2回まで無料</span></div></div></div>
+      <div class="flow-step"><div class="flow-card"><div class="flow-step-badge">STEP 6</div><div class="flow-step-title">デザイン確定・制作開始</div><div class="flow-step-desc">デザイン内容に問題がなければ、ステッカーの制作を開始します。</div></div></div>
+      <div class="flow-step"><div class="flow-card"><div class="flow-step-badge">STEP 7</div><div class="flow-step-title">郵送</div><div class="flow-step-desc">完成したステッカーをご指定の住所へ郵送します。送料は料金に含まれています。</div></div></div>
+      <div class="flow-step"><div class="flow-card goal-card"><div class="flow-step-badge goal-badge">GOAL</div><div class="flow-step-title goal-title">受け取り（納品）</div><div class="flow-step-desc">お届け完了です。完成したステッカーをお楽しみください！</div></div></div>
+    </div>
+  </div>
+</div>
 
 <div class="container">
 
@@ -366,8 +397,8 @@
       <div class="upload-area" id="uploadArea" style="cursor:default;">
         <input type="file" id="fileInput" accept="image/*" multiple onchange="handleFiles(this.files)">
         <div class="u-icon">📎</div>
-        <div class="u-text"><strong>📧 お振込み後、担当者からのメールに返信する形でお送りください</strong><br>フォーム送信 → お振込み確認後、担当者よりメールにてご連絡します。<br>そのメールへ画像を添付して返信してください。</div>
-        <div class="u-hint">対応形式：JPG・PNG・PDF</div>
+        <div class="u-text"><strong>📧 申込後の確認メールに返信する形でお送りください</strong><br>フォーム送信後、確認メールが届きます。そのメールへ画像を添付して返信してください。</div>
+        <div class="u-hint">申込完了後に届く確認メールへの返信でお送りください。JPG・PNG・PDF対応。</div>
       </div>
       <div class="file-preview" id="filePreview"></div>
     </div>

@@ -28,8 +28,8 @@
   .hero-catch{font-size:clamp(16px,3vw,22px);color:rgba(255,255,255,0.85);margin-bottom:32px;line-height:1.6;}
   
   /* キャッチバッジ */
-  .catch-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:40px;}
-  .catch-badge{background:rgba(120,180,180,0.25);border:1.5px solid rgba(120,180,180,0.5);border-radius:50px;padding:10px 22px;font-size:15px;font-weight:700;color:white;}
+  .catch-badges{display:flex;flex-wrap:nowrap;justify-content:center;gap:6px;margin-bottom:20px;}
+  .catch-badge{background:rgba(120,180,180,0.25);border:1.5px solid rgba(120,180,180,0.5);border-radius:50px;padding:8px 10px;font-size:12px;font-weight:700;color:white;white-space:nowrap;}
   .catch-badge span{color:#a8d8d8;}
 
   .hero-btn{display:block;background:var(--teal);color:white;font-family:'Noto Sans JP',sans-serif;font-size:18px;font-weight:700;padding:18px 16px;border-radius:50px;text-decoration:none;letter-spacing:1px;transition:all .2s;box-shadow:0 4px 20px rgba(120,180,180,0.4);text-align:center;white-space:nowrap;}
@@ -45,37 +45,37 @@
   .sec-title{font-family:'Noto Serif JP',serif;font-size:clamp(20px,3vw,30px);font-weight:700;color:var(--text);text-align:center;margin-bottom:40px;}
 
   /* SPEC CARDS */
-  .spec-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:40px;}
-  .spec-card{background:var(--teal-pale);border:1.5px solid var(--teal-light);border-radius:var(--radius);padding:24px 16px;text-align:center;}
-  .spec-card .icon{font-size:32px;margin-bottom:10px;}
+  .spec-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:20px;}
+  .spec-card{background:var(--teal-pale);border:1.5px solid var(--teal-light);border-radius:var(--radius);padding:10px 8px;text-align:center;}
+  .spec-card .icon{font-size:22px;margin-bottom:4px;}
   .spec-card .label{font-size:12px;color:var(--teal-dark);font-weight:600;margin-bottom:4px;}
-  .spec-card .value{font-size:20px;font-weight:700;color:var(--text);}
-  .spec-card .sub{font-size:11px;color:var(--gray-light);margin-top:2px;}
+  .spec-card .value{font-size:17px;font-weight:700;color:var(--text);white-space:nowrap;}
+  .spec-card .sub{font-size:10px;color:var(--gray-light);margin-top:1px;}
 
   /* STYLE SAMPLES */
-  .style-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+  .style-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
   .style-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.06);}
   .style-img{aspect-ratio:1;overflow:hidden;background:#f0f0f0;}
   .style-img img{width:100%;height:100%;object-fit:cover;}
-  .style-label{padding:12px 16px;font-size:14px;font-weight:700;color:var(--text);border-top:1px solid var(--border);}
-  .style-desc{padding:0 16px 14px;font-size:12px;color:var(--gray-light);line-height:1.5;}
+  .style-label{padding:6px 10px;font-size:13px;font-weight:700;color:var(--text);border-top:1px solid var(--border);}
+  .style-desc{padding:0 10px 8px;font-size:11px;color:var(--gray-light);line-height:1.4;}
 
   /* CUSTOM ORDER */
-  .custom-box{background:var(--teal-pale);border:1.5px solid var(--teal);border-radius:var(--radius);padding:28px 24px;margin-top:24px;}
+  .custom-box{background:var(--teal-pale);border:1.5px solid var(--teal);border-radius:var(--radius);padding:14px 12px;margin-top:14px;}
   .custom-box h3{font-size:17px;font-weight:700;color:var(--teal-dark);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
-  .custom-items{display:flex;flex-direction:column;gap:12px;}
-  .custom-item{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 18px;display:flex;gap:12px;align-items:flex-start;}
+  .custom-items{display:flex;flex-direction:column;gap:6px;}
+  .custom-item{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:10px 12px;display:flex;gap:8px;align-items:flex-start;}
   .custom-item .icon{color:var(--teal);font-weight:700;font-size:18px;flex-shrink:0;}
-  .custom-item-title{font-size:15px;font-weight:700;color:var(--text);margin-bottom:3px;}
-  .custom-item-desc{font-size:13px;color:var(--text-sub);line-height:1.6;}
+  .custom-item-title{font-size:14px;font-weight:700;color:var(--text);margin-bottom:2px;white-space:nowrap;}
+  .custom-item-desc{font-size:12px;color:var(--text-sub);line-height:1.5;}
 
   /* PRICE */
-  .price-section{background:linear-gradient(135deg,var(--teal-pale),#e0f0f0);border:2px solid var(--teal);border-radius:var(--radius);padding:32px;text-align:center;margin:0 auto;max-width:500px;}
-  .price-label{font-size:13px;color:var(--teal-dark);font-weight:600;margin-bottom:8px;}
-  .price-amount{font-family:'Montserrat',sans-serif;font-size:52px;font-weight:700;color:var(--teal-dark);}
+  .price-section{background:linear-gradient(135deg,var(--teal-pale),#e0f0f0);border:2px solid var(--teal);border-radius:var(--radius);padding:16px;text-align:center;margin:0 auto;max-width:100%;}
+  .price-label{font-size:12px;color:var(--teal-dark);font-weight:600;margin-bottom:4px;white-space:nowrap;}
+  .price-amount{font-family:'Montserrat',sans-serif;font-size:42px;font-weight:700;color:var(--teal-dark);}
   .price-amount span{font-size:20px;font-weight:500;}
-  .price-incl{font-size:13px;color:var(--text-sub);margin-top:8px;}
-  .price-detail{margin-top:16px;font-size:13px;color:var(--text-sub);background:white;border-radius:8px;padding:12px 16px;text-align:left;line-height:1.8;}
+  .price-incl{font-size:12px;color:var(--text-sub);margin-top:4px;}
+  .price-detail{margin-top:10px;font-size:12px;color:var(--text-sub);background:white;border-radius:8px;padding:10px 12px;text-align:left;line-height:1.6;}
 
   /* FLOW */
   .flow-wrap{position:relative;}
@@ -105,10 +105,10 @@
   .footer img{height:24px;margin-bottom:8px;display:block;margin-left:auto;margin-right:auto;}
 
   @media(max-width:520px){
-    .spec-cards{grid-template-columns:1fr 1fr;}
+    .spec-cards{grid-template-columns:repeat(2,1fr);}
     .style-grid{grid-template-columns:1fr 1fr;}
     .header{padding:14px 16px;}
-    .catch-badges{flex-direction:column;align-items:center;}
+    .catch-badges{flex-direction:row;flex-wrap:nowrap;}
   }
 </style>
 </head>
@@ -126,11 +126,6 @@
     <div class="hero-eyebrow">Original Sticker Design</div>
     <h1>あなたの<br><span>Vストロームに、</span><br>世界にひとつの<br>ステッカーを。</h1>
     <p class="hero-catch">生成AIを活用したオリジナルデザインで<br>あなただけのバイクライフを彩ります。</p>
-    <div class="catch-badges">
-      <div class="catch-badge">🏍️ <span>直径5cm</span> 屋外対応ステッカー</div>
-      <div class="catch-badge">📦 <span>100枚</span> セット</div>
-      <div class="catch-badge">✨ デザイン・製造・送料込み <span>¥15,000</span></div>
-    </div>
     <a href="https://thinki-sticker.github.io/sticker-form/sticker_form.html" class="hero-btn">申込フォームはこちら →</a>
   </div>
 </div>
@@ -228,7 +223,7 @@
           </div>
         </div>
       </div>
-      <div style="margin-top:16px;background:var(--teal-pale);border:1.5px solid var(--teal);border-radius:10px;padding:12px 16px;text-align:center;"><span style="font-size:13px;color:var(--teal-dark);font-weight:600;">📩 カスタムオーダーのお問い合わせ</span><br><a href="mailto:contact@thinki.co.jp" style="color:var(--teal-dark);font-size:16px;font-weight:700;text-decoration:none;letter-spacing:0.5px;">contact@thinki.co.jp</a></div>
+      <div style="margin-top:12px;font-size:12px;color:var(--gray-light);text-align:right;">お問い合わせ：<a href="/cdn-cgi/l/email-protection#55363a3b2134362115213d3c3b3e3c7b363a7b3f25" style="color:var(--teal-dark);"><span class="__cf_email__" data-cfemail="b2d1dddcc6d3d1c6f2c6dadbdcd9db9cd1dd9cd8c2">[email&#160;protected]</span></a></div>
     </div>
   </div>
 </div>
